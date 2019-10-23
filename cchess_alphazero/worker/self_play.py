@@ -146,7 +146,7 @@ class SelfPlayWorker:
                 no_eat_count = 0
             history.append(state)
 
-            if no_eat_count >= 120 or turns / 2 >= self.config.play.max_game_length:
+            if no_eat_count >= 120 or turns / 2 >= self.config.play.max_game_length/20:
                 game_over = True
                 value = 0
             else:
